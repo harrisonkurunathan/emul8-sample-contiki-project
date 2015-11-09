@@ -1,0 +1,12 @@
+# C
+*.bin
+*.hex
+*.elf
+*.a
+*.map
+obj*/
+*.cc2538dk
+
+# editors
+*.sw*
+*~
