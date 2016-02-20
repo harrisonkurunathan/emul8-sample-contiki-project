@@ -10,7 +10,7 @@ Repository contents
 
 * ``Makefile`` - a simple Contiki-style Makefile
 * ``hello.c`` - an example program, which can be freely modified
-* ``hello-cc2538.emul8`` - and Emul8 script which uses several features of the Emul8 scripting language, such as variables and macros.
+* ``hello-cc2538.emul8`` - an Emul8 script which uses several features of the Emul8 scripting language, such as variables and macros.
 
 Compiling
 ---------
