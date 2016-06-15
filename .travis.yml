@@ -4,6 +4,8 @@ notifications:
 language: c
 
 before_script:
+  ## Use Contiki method of making sure wget succeeds.
+  - WGET="travis_retry wget --continue --tries=20 --waitretry=10 --retry-connrefused --no-dns-cache --timeout 300"
   ## Install mainline ARM toolchain.
   - $WGET https://launchpad.net/gcc-arm-embedded/5.0/5-2015-q4-major/+download/gcc-arm-none-eabi-5_2-2015q4-20151219-linux.tar.bz2 &&
     tar xjf gcc-arm-none-eabi-5_2-2015q4-20151219-linux.tar.bz2 -C /tmp/ &&
