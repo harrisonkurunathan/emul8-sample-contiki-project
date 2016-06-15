@@ -4,6 +4,8 @@ notifications:
 language: c
 
 before_script:
+  ## Install 32-bit compatibility libraries
+  - sudo apt-get -qq install libc6:i386 libgcc1:i386 gcc-4.6-base:i386 libstdc++5:i386 libstdc++6:i386
   ## Use Contiki method of making sure wget succeeds.
   - WGET="travis_retry wget --continue --tries=20 --waitretry=10 --retry-connrefused --no-dns-cache --timeout 300"
   ## Install mainline ARM toolchain.
@@ -11,9 +13,6 @@ before_script:
   - tar xjf gcc-arm-none-eabi-5_2-2015q4-20151219-linux.tar.bz2 -C /tmp/
   - sudo cp -f -r /tmp/gcc-arm-none-eabi-5_2-2015q4/* /usr/local/
   - rm -rf /tmp/gcc-arm-none-eabi-* gcc-arm-none-eabi-*-linux.tar.bz2
-  - which arm-none-eabi-gcc
-  - ls /usr/local/bin
-  - ls -al /usr/local/bin/arm-none-eabi-gcc
   - arm-none-eabi-gcc --version
 
 script:
