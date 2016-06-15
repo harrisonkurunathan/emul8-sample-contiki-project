@@ -13,6 +13,7 @@ before_script:
   - rm -rf /tmp/gcc-arm-none-eabi-* gcc-arm-none-eabi-*-linux.tar.bz2
   - which arm-none-eabi-gcc
   - ls /usr/local/bin
+  - ls -al /usr/local/bin/arm-none-eabi-gcc
   - arm-none-eabi-gcc --version
 
 script:
